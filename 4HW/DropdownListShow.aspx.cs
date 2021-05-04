@@ -10,5 +10,23 @@ namespace _4HW {
         protected void Page_Load(object sender, EventArgs e) {
 
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DropDownList1.SelectedValue == "北區")
+            {
+                DropDownList2.Items.Clear();
+                DropDownList2.Items.Add("基隆");
+                DropDownList2.Items.Add("台北");
+                DropDownList2.Items.Add("新北");
+            }
+            else if (DropDownList1.SelectedValue == "中區")
+            {
+                DropDownList2.Items.Clear();
+                DropDownList2.Items.Add("苗栗");
+                DropDownList2.Items.Add("台中");
+                DropDownList2.Items.Add("南投");
+            }
+        }
     }
 }
